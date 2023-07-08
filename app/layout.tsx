@@ -1,3 +1,5 @@
+import Container from './components/Container'
+import Navbar from './components/navbar/Navbar'
 import './globals.css'
 import { Nunito } from 'next/font/google'
 
@@ -17,8 +19,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={font.className}>{children}</body>
+    <html lang="en">S
+      <body className={font.className}>
+        <Navbar/>
+        <Container children={undefined}/>
+        
+        {children}</body>
     </html>
   )
 }
